@@ -4,8 +4,9 @@ function out($msg, $lnNum=1) { fwrite(STDOUT, $msg.str_repeat("\n",$lnNum)); }
 function ln($n=1) { out('', $n); }
 function h1($msg) { ln(2); out("-------");  out($msg); }
 
-if (!file_exists('config.php')) { out('Cannot find config.php file!'); die(); }
-require_once 'config.php';
+$configFile = dirname(__FILE__).'/config.php';
+if (!file_exists($configFile)) { out('Cannot find config.php file!'); die(); }
+require_once $configFile;
 
 
 h1("Update sources from git...");
