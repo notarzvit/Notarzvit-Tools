@@ -1,0 +1,3 @@
+<?php
+
+$dir = '/var/www/notarzvit/gitproject';
