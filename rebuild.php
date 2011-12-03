@@ -25,12 +25,13 @@ $writeDirs = array(
 	$dir.'/lib/tcpdf/cache',
 	$dir.'/lib/tcpdf/fonts',
 	$dir.'/lib/tcpdf/images',
-	$dir.'/docs/invoices'
+	$dir.'/docs/invoices',
+	$dir.'/docs/reports'
 );
 foreach($writeDirs as $d)
 {
 	out('  * '.$d);
-	chmod($d, 0776);
+	chmod($d, 0777);
 }
 
 
